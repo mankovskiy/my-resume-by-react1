@@ -2,7 +2,7 @@
   "name": "my-resume-by-react1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mankovskiy.github.io/my-resume-by-react1/",
+  "homepage": "https://mankovskiy.github.io/resume-react/",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
