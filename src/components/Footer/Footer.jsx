@@ -1,42 +1,43 @@
-// import '../Footer/footer.css';
-import '../../styles/style.css';
-import sprite from '../../images/symbol-defs.svg';
-import { FooterStyle, FlexList, SocialsItem } from './Footer.styled';
+import {
+  AiFillTwitterCircle,
+  AiOutlineInstagram,
+  AiFillGithub,
+  AiFillLinkedin,
+} from 'react-icons/ai';
+import {
+  FooterStyle,
+  FlexList,
+  SocialsItem,
+  Link,
+  FooterText,
+} from './Footer.styled';
 
 export const Footer = () => {
   return (
     <FooterStyle>
       <FlexList>
         <SocialsItem>
-          <a href="{instagram} " className="footer-socials-list__link">
-            <svg className="footer-socials-list__icon" width="38" height="38">
-              <use href={sprite + '#icon-instagram'}></use>
-            </svg>
-          </a>
+          <Link href="{instagram}">
+            <AiOutlineInstagram size={38} />
+          </Link>
         </SocialsItem>
         <SocialsItem>
-          <a href="{}" className="footer-socials-list__link">
-            <svg className="footer-socials-list__icon" width="38" height="38">
-              <use href={sprite + '#icon-twitter'}></use>
-            </svg>
-          </a>
+          <Link href="{}">
+            <AiFillTwitterCircle size={38} />
+          </Link>
         </SocialsItem>
         <SocialsItem>
-          <a href="{}" className="footer-socials-list__link">
-            <svg className="footer-socials-list__icon" width="38" height="38">
-              <use href={sprite + '#icon-linkedin2'}></use>
-            </svg>
-          </a>
+          <Link href="{}">
+            <AiFillLinkedin size={38} />
+          </Link>
         </SocialsItem>
         <SocialsItem>
-          <a href="{}" className="footer-socials-list__link">
-            <svg className="footer-socials-list__icon" width="38" height="38">
-              <use href={sprite + '#icon-github'}></use>
-            </svg>
-          </a>
+          <Link href="{}">
+            <AiFillGithub size={38} />
+          </Link>
         </SocialsItem>
       </FlexList>
-      <p className="footer__year">© 2023 frontend-dev.com</p>
+      <FooterText>© 2023 frontend-dev.com</FooterText>
     </FooterStyle>
   );
 };

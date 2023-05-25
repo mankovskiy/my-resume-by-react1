@@ -2,12 +2,27 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const HeaderBCG = styled.header`
-  background-color: var(--dark-main-color);
+  background-color: ${({ theme }) => theme.colors.darkMainColor};
 `;
 
 export const BotomLine = styled.div`
   border-bottom: 1px solid #26292d;
   letter-spacing: normal;
+`;
+
+export const Logo = styled(NavLink)`
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: ${({ theme }) => theme.colors.whiteColor};
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+`;
+export const LogoLeftPart = styled.span`
+  font-weight: 700;
 `;
 
 export const NavFlexWrap = styled.div`
@@ -30,7 +45,7 @@ export const Links = styled(NavLink)`
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: var(--white-color);
+  color: ${({ theme }) => theme.colors.whiteColor};
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     opacity: 0.8;
@@ -44,7 +59,7 @@ export const Links = styled(NavLink)`
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--accent-color);
+    background-color: ${({ theme }) => theme.colors.accentColor};
   }
 `;
 
@@ -59,7 +74,7 @@ export const NavBurgerBar = styled.span`
   height: 3px;
   margin: 5px auto;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: var(--white-color);
+  background-color: ${({ theme }) => theme.colors.whiteColor};
 `;
 
 export const ThemeBtn = styled.button`
@@ -79,7 +94,7 @@ export const ThemeBtn = styled.button`
     display: block;
     width: 24px;
     height: 24px;
-    background-color: var(--white-color);
+    background-color: ${({ theme }) => theme.colors.whiteColor};
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 `;

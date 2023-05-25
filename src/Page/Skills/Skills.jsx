@@ -1,23 +1,28 @@
-// import './skills.css';
-import '../../styles/style.css';
+import { SectionSkills } from './Skills.styled';
+import {
+  Container,
+  SectionTitle,
+  SectionTitlePoint,
+  SectionTitleText,
+} from 'components/App.styled';
 
 export const Skills = () => {
   return (
     <main>
-      <section className="skills">
-        <div className="container">
-          <h2 className="section-title">Skills</h2>
-          <h3 className="section-title__point">Frontend</h3>
-          <p className="section-title__text">
+      <SectionSkills>
+        <Container>
+          <SectionTitle>Skills</SectionTitle>
+          <SectionTitlePoint>Frontend</SectionTitlePoint>
+          <SectionTitleText>
             JavaScript, TypeScript, ReactJS, Angular, Redux, HTML, CSS, NPM,
             BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
-          </p>
-          <h3 className="section-title__point">Backend</h3>
-          <p className="section-title__text">
+          </SectionTitleText>
+          <SectionTitlePoint>Backend</SectionTitlePoint>
+          <SectionTitleText>
             NodeJS, MySQL, MongoDB, PHP, Laravel
-          </p>
-        </div>
-      </section>
+          </SectionTitleText>
+        </Container>
+      </SectionSkills>
     </main>
   );
 };

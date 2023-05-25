@@ -1,23 +1,19 @@
-// import './projects.css';
-// import '../../styles/main.css';
-import '../../styles/style.css';
+import { ProjectsSection } from './Projects.styled';
+import { Container } from 'components/App.styled';
 
-import { Project } from 'components/Project/Project';
 import { projects } from '../../dataProjects/projects';
+import { ProjectsTitle } from './Projects.styled';
+import { ProjectList } from 'components/ProjectsList/ProjectsList';
 
 export const Projects = () => {
   return (
     <main>
-      <section className="projects">
-        <div className="container">
-          <h2 className="projects__title">Projects</h2>
-          <ul className="projects__list">
-            {projects.map(({ title, id, img }) => {
-              return <Project title={title} key={id} img={img} />;
-            })}
-          </ul>
-        </div>
-      </section>
+      <ProjectsSection>
+        <Container>
+          <ProjectsTitle>Projects</ProjectsTitle>
+          <ProjectList projects={projects} />
+        </Container>
+      </ProjectsSection>
     </main>
   );
 };

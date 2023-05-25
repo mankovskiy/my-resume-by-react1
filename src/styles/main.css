@@ -9,34 +9,34 @@ font-family: 'Poppins', sans-serif; */
   --white-main-color: #e5e5e5;
   --accent-color: #5c62ec;
   --white-color: #ffffff;
-
   --dark-theme-bg-color: #212121;
   --dark-theme-title: #ffffff;
 
   /* whiteTheme */
-  --section-title: var(--accent-color);
+
+  /* --section-title: var(--accent-color);
   --bcg-color: var(--white-main-color);
   --title-color: var(--accent-color);
-  --text-color: var(--dark-main-color);
+  --text-color: var(--dark-main-color); */
 
   /* darkTheme */
 }
 
-.dark {
+/* .dark {
   --section-title: var(--white-color);
   --bcg-color: var(--dark-theme-bg-color);
   --title-color: var(--white-color);
   --text-color: var(--white-color);
-}
+} */
 
-html,
+/* html,
 body {
   font-family: 'DM Sans', sans-serif;
   letter-spacing: -0.5px;
   background-color: var(--bcg-color);
   color: var(--text-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 /* .container {
   margin: 0 auto;
   padding: 0 15px;

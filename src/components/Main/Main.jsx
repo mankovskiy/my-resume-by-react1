@@ -1,10 +1,12 @@
 // import './Main.css';
 import '../../styles/style.css';
+import { ProjectsTitle } from 'Page/Projects/Projects.styled';
+import { Hero } from './Main.styled';
 
 export const Main = () => {
   return (
     <main>
-      <section className="hero">
+      <Hero>
         <div className="hero__wrap">
           <span className="hero__title">
             Hi, my name is
@@ -19,10 +21,10 @@ export const Main = () => {
 
           <button className="button">Download CV</button>
         </div>
-      </section>
+      </Hero>
       <section className="projects">
         <div className="container">
-          <h2 className="projects__title">Projects</h2>
+          <ProjectsTitle>Projects</ProjectsTitle>
           <ul className="projects__list">
             <li className="projects__item">
               <a href="{}" className="projects__link">

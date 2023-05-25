@@ -3,10 +3,10 @@ import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
 import { Outlet } from 'react-router-dom';
 
-export const SharedLayout = () => {
+export const SharedLayout = ({ toggleTheme }) => {
   return (
     <div>
-      <Header />
+      <Header toggleTheme={toggleTheme} />
       <Suspense fallback={<div>Loading page...</div>}>
         <Outlet />
       </Suspense>

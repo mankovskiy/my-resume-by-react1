@@ -1,27 +1,25 @@
 import '../../styles/style.css';
+import { ProjectSection } from './Project.styled';
+import { Container } from 'components/App.styled';
 
-export const Projects = () => {
+export const Project = ({ title, img, skills, gitLink }) => {
   return (
     <main>
-      <section className="project">
-        <div className="container">
+      <ProjectSection>
+        <Container>
           <div className="project-details">
-            <h1 className="section-title">Video service</h1>
-            <img
-              className="project-ditals__cover"
-              src="./images/proj-dit.jpg"
-              alt=""
-            />
+            <h1 className="section-title">{title}</h1>
+            <img className="project-ditals__cover" src={img} alt="" />
             <div className="project-ditales__descript">
-              <p>Skills: React, Node.js, MongoDB</p>
+              <p>{skills}</p>
             </div>
             <a href="#!" className="buton-outline">
               <img src="./images/git.svg" alt="" />
-              GitHub repo
+              {gitLink}
             </a>
           </div>
-        </div>
-      </section>
+        </Container>
+      </ProjectSection>
     </main>
   );
 };

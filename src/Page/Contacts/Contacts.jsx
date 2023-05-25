@@ -1,26 +1,27 @@
 // import './contacts.css';
-import '../../styles/style.css';
-export const Contacts = () => {
+// import '../../styles/style.css';
+import { SectionCont } from './Contacts.styled';
+import {
+  SectionTitle,
+  SectionTitlePoint,
+  SectionTitleText,
+  Container,
+} from 'components/App.styled';
+
+export const Contacts = ({ mail, tel, text }) => {
   return (
     <main>
-      <section className="contacts">
-        <div className="container">
-          <h1 className="section-title">Contacts</h1>
-          <h2 className="section-title__point">Location</h2>
-          <p className="section-title__text">England, Birminghah</p>
-          <h3 className="section-title__point">WhatsApp</h3>
-          <a href="tel:+644646464649" className="section-title__text">
-            +644646464649
-          </a>
-          <h3 className="section-title__point">Email</h3>
-          <a
-            href="mailto:odnorazka25@gmail.com"
-            className="section-title__text section-title__text--color"
-          >
-            odnorazka25@gmail.com
-          </a>
-        </div>
-      </section>
+      <SectionCont>
+        <Container>
+          <SectionTitle>Contacts</SectionTitle>
+          <SectionTitlePoint>Location</SectionTitlePoint>
+          <SectionTitleText>England, Birminghah</SectionTitleText>
+          <SectionTitlePoint>WhatsApp</SectionTitlePoint>
+          <SectionTitleText href={`tel:${tel}`}>{tel}</SectionTitleText>
+          <SectionTitlePoint>{text}</SectionTitlePoint>
+          <SectionTitleText href={`tel:${mail}`}>{mail}</SectionTitleText>
+        </Container>
+      </SectionCont>
     </main>
   );
 };
